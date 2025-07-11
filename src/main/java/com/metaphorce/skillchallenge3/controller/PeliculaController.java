@@ -71,9 +71,9 @@ public class PeliculaController {
 	 * Obtiene todas la pelicula disponibles
 	 * 
 	 */
-	@GetMapping("/peliculas/disponible")
-	public ResponseEntity<List<Pelicula>> obtenerPeliculasDisponibles(){
-		return new ResponseEntity<>(peliculaService.obtenerPeliculasPorDisponibilidad(true), HttpStatus.OK);
+	@GetMapping("/peliculas/disponibilidad/{disponible}")
+	public ResponseEntity<List<Pelicula>> obtenerPeliculasDisponibles(@PathVariable boolean disponible){
+		return new ResponseEntity<>(peliculaService.obtenerPeliculasPorDisponibilidad(disponible), HttpStatus.OK);
 	}
 	/**
 	 * Obtiene todas la pelicula  no disponibles

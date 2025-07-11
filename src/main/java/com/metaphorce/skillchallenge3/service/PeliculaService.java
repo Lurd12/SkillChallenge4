@@ -37,7 +37,7 @@ public class PeliculaService {
 	}
 	
 	public List<Pelicula> obtenerPeliculasPorDisponibilidad(boolean disponibilidad){
-		return peliculaRepository.findAll().stream().filter(p -> p.isDisponible() == disponibilidad).toList();
+		return peliculaRepository.findByDisponible(disponibilidad);
 	}
 	
 	

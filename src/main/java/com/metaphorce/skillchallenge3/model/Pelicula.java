@@ -25,6 +25,7 @@ public class Pelicula {
 	@NotNull(message="El titulo no debe ser nulo")
 	@NotEmpty(message = "El titulo no debe estar vacio")
 	private String nombre;
+	@NotNull(message = "La disponibilidad no debe ser nula")
 	private boolean disponible;
 
 	public Pelicula(){}
